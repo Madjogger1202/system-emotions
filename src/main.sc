@@ -1,5 +1,10 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
+
+init:
+    bind("postProcess", function($context) {
+        log(toPrettyString($context.nBest));
+    });
 theme: /
 
     state: Start
